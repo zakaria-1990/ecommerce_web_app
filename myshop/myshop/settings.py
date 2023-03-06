@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',
+    'coupons.apps.CouponsConfig',
 ]
 
 MIDDLEWARE = [
@@ -133,3 +135,18 @@ MEDIA_ROOT = BASE_DIR / 'media'
 CART_SESSION_ID = 'cart'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Stripe settings
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51MiZNEFy56kEVLHZaRTfnfUwSHdCLP91Ea0EmIKpo3Y1KAZtDV7sbvygbD6D6myTvDDOrx0kNTOrWwGKTmmPjNeE00BhX4qSoK' # Publishable key
+STRIPE_SECRET_KEY = 'sk_test_51MiZNEFy56kEVLHZglrfNIzZGSnh4exboZtHrLuOYcBc2zLttD9a47oyM4F0EKxK6IxSg7gasPL11SUV0QmBowzM00LCxkUeAx' # Secret key
+STRIPE_API_VERSION = '2022-08-01'
+STRIPE_WEBHOOK_SECRET = 'whsec_6de0bbdf2fc471a1604e6ef20ab93707ef253b32eadd8db35816dc9f3448a64f'
+
+STATIC_ROOT = BASE_DIR / 'static'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Redis settings
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+REDIS_DB = 1
